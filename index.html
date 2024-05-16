@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styless.css">
 </head>
 <body>
-    <div class="form-container">
-        <form id="contactForm">
+    <div class="container">
+        <form id="contact-form">
             <h2>Contact Us</h2>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -26,6 +26,19 @@
         </form>
         <p id="responseMessage"></p>
     </div>
-    <script src="script.js"></script>
+    <script>
+        document.getElementById('contact-form')
+.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value; 
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
+    var subject = "New message from " + name; 
+    var body = "Name: " + name + "\nEmail: " + email + "\nMessage: " + message;
+    var mailto_link = 'mailto: gowthamimaydal@gmail.com' + '?subject=' 
+    + subject + '&body=' + encodeURIComponent(body);
+    window.location.href = mailto_link;
+  });
+    </script>
 </body>
 </html>

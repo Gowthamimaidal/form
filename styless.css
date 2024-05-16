@@ -9,10 +9,10 @@ body {
 }
 
 .form-container {
-    background: #7e7474;
+    background: #ffffff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgb(87, 70, 70);
     width: 300px;
 }
 
